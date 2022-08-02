@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL Fluid Simulation</title>
+
+    
+    <script src="./dat.gui.min.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        *{
+            user-select: none;
+        }
+
+        html,body {
+            overflow: hidden;
+            background-color: black;
+        }
+
+        body{
+            margin: 0;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .dg.ac{
+            display: none;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            position: relative;
+        }
+
+        #textbox-container{
+            z-index: 3;
+            position: absolute;
+            transition: 1s;
+            margin-left: 10%;
+            margin-top: 25%;
+
+        }
+        #textbox-container:hover{
+            opacity: 0;
+        }
+        #textbox h1 {
+            color: white;
+            font-family: 'Audiowide', cursive;
+            display: inline;
+        }
+
+        #textbox p {
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+            display: inline;
+            font-stretch: 10pt;
+        }
+
+    </style>
+
+    <script>
+        window.ga =
+            window.ga || function ()  { (ga.q = ga.q || []).push(arguments)}
+        ga.l = +new Date()
+        ga('create', 'UA-105392568-1', 'auto')
+        ga('send', 'pageview')
+    </script>
+</head>
+<body>
+    <div id="textbox-container">
+        <div id="textbox">
+            <h1>WebGL Fluid Simulation</h1><br/><br/>
+            <p>Just drag your mouse around (or do a swipe)</p><br/>
+            <p>and see the magic!</p>
+        </div>
+    </div>
+<canvas>
+</canvas>
+    <div class="board">
+        <span class="board-close">&times;</span>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
